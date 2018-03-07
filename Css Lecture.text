@@ -1,0 +1,25 @@
+***********************************************
+*&*&*&*&*&*&*&* CSS *&*&*&*&*&*&*&*&*&*&*&*&*&&*
+***********************************************
+ - There are three pillars, which if you follow you will guarantee that you are good web designer.
+    1- Responsiveness
+      *Fluid Layouts
+      *Media Queries
+      *Responsive images
+      *correct units.
+      *Desktop first vs mobile first.
+    2- Maintainable and scalable code.
+      * clean code, easy to understand, reusable, organize files, name classes, html structure
+    3- Web Performance
+      *less HTTP requests
+      *less code
+      *compress code
+      *use a CSS preprocessor
+      *less images
+      *compress images
+ - Parse css happens by resolve conflicting cascade, and then process final css values.
+ - Some CSS properties are inherited, some other not.
+ - Use $ to declare variables in sass
+ - Sass allows selectors nesting.
+ - use & to represent :selector in Sass
+ - mixing is a chunck of code that can be stored like a variable.Defination: @mixins clearfix{}, usage: @include clearfix
