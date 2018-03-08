@@ -22,4 +22,19 @@
  - Use $ to declare variables in sass
  - Sass allows selectors nesting.
  - use & to represent :selector in Sass
- - mixing is a chunck of code that can be stored like a variable.Defination: @mixins clearfix{}, usage: @include clearfix
+ - mixins is a chunck of code that can be stored like a variable.Defination: @mixin clearfix{}, usage: @include clearfix
+ - mixins can takes parameters(color, width,height...)
+
+- Sass has a extend feature example: {
+                        %message-shared {
+                            border: 1px solid #ccc;
+                            padding: 10px;
+                            color: #333;
+                        }
+                        .message {
+                            @extend %message-shared;
+                        }
+    }
+- Sass also use functions example:
+                                   @function funName ($a,$b) { @return}
+-
