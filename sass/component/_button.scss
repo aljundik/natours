@@ -9,6 +9,7 @@
       display: inline-block;
       transition: all .2s;
       position: relative;
+      font-size: $default-font-size;
   }
 
   &:hover{
@@ -52,9 +53,33 @@
         background-color: white;
     }
 }
+.btn-text {
+  text-decoration: none;
+
+  &:link,
+  &:visited{
+    color: $color-primary;
+    display: inline-block;
+    border-bottom: 1px solid $color-primary;
+    padding: 3px;
+    font-size: $default-font-size;
+    transition: all 0.2s;
+  }
+
+  &:hover{
+    background-color: $color-primary;
+    color: $color-white;
+    box-shadow: 0 1rem 2rem rgba($color-black,.15);
+    transform: translateY(0.2rem);
+  }
+
+  &:active{
+    box-shadow: 0 5rem 1rem rgba($color-black,.15);
+    transform: translateY(0);
+  }
+}
 
 .btn-animated{
     animation: moveInBottom 0.5s ease-out;
     animation-fill-mode: backwards;
-
 }
