@@ -1,6 +1,5 @@
 .row {
   max-width: $grid-width;
-  background-color: #eee;
   margin: 0 auto;
   &:not(:last-child){ // don't apply margin-bottom on last-child, but apply on evrey thin else
     margin-bottom: $gutter-vertical;
@@ -8,7 +7,6 @@
 
   @include clearfix;
   [class^="col-"]{
-    background-color: orangered;
     float: left;
 
     &:not(:last-child) {
