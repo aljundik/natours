@@ -113,6 +113,20 @@ body {
 .u-margin-top-small {
   margin-top: 1.5rem; }
 
+.bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  z-index: -1;
+  opacity: 0.15; }
+  .bg-video__content {
+    height: 100%;
+    width: 100%;
+    object-fit: cover; }
+
 .button:link, .button:visited {
   text-transform: uppercase;
   text-decoration: none;
@@ -193,7 +207,6 @@ body {
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
     border-radius: 3px;
-    overflow: hidden;
     box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15); }
     .card__side--back {
       transform: rotateY(180deg); }
@@ -230,7 +243,7 @@ body {
     text-align: right;
     color: #fff;
     position: absolute;
-    top: 10rem;
+    top: 12rem;
     right: 2rem;
     width: 75%; }
   .card__heading--span {
@@ -322,6 +335,53 @@ body {
   .feature-box:hover {
     transform: translateY(-1.5rem) scaleY(1.03); }
 
+.story {
+  background-color: #fff;
+  width: 75%;
+  padding: 5rem;
+  margin: 0 auto;
+  color: #000;
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+  transform: skewX(-12deg); }
+  .story > * {
+    transform: skewX(12deg); }
+  .story__shape {
+    float: left;
+    width: 15rem;
+    height: 15rem;
+    background-color: green;
+    -webkit-shape-outside: circle(50% at 40% 50%);
+    shape-outside: circle(50% at 50% 50%);
+    clip-path: circle(50% at 50% 50%);
+    transform: translateX(-2rem) skewX(12deg);
+    position: relative;
+    backface-visibility: hidden; }
+  .story__image {
+    width: 15rem;
+    height: 15rem;
+    backface-visibility: hidden;
+    transform: scale(1.1);
+    transition: all 0.3s; }
+  .story__caption {
+    position: absolute;
+    top: 50%;
+    left: 55%;
+    color: #fff;
+    transform: translate(-50%, 20%);
+    opacity: 0;
+    transition: all 0.3s;
+    backface-visibility: hidden; }
+  .story:hover .story__caption {
+    transform: translate(-50%, -50%);
+    opacity: 1; }
+  .story:hover .story__image {
+    transform: scale(1);
+    filter: blur(2px) brightness(85%); }
+  .story__more {
+    width: 75%;
+    margin: 0 auto;
+    text-align: center; }
+
 .row {
   max-width: 114rem;
   margin: 0 auto; }
@@ -388,3 +448,7 @@ body {
 .section-tour {
   background-color: #f7f7f7;
   padding: 15rem 0; }
+
+.section-story {
+  padding: 15rem 0;
+  position: relative; }
